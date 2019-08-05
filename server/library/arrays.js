@@ -1,5 +1,5 @@
 const arrays = () => {
-    const _objectToArray = (objeto,tabla) => {
+    const _objectToArray = (objeto) => {
         var array = [];
         for (const key in objeto) {
             if (objeto.hasOwnProperty(key)) {

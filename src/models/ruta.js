@@ -19,23 +19,25 @@ const ruta = () => {
     };
 
     const _getOrigenes = function(req,res){
-        mssql.query('select id,Origen from localidades',(err,recordset)=>{
+        /*mssql.query('select id,Origen from localidades',(err,recordset)=>{
             if (err) {
                 console.log('Error de Consulta getOrigenes: '+err);
             }else{
                 res.json(recordset.recordset);
             }
-        });
+        });*/
+        res.json([{id:1,Origen:'Oaxaca'},{id:2,Origen:'Huatulco'}]);
     };
 
     const _getDestinos = function(req,res){
-        mssql.query("select id,Destino from localidades where Origen ='"+req.params.origen+"'",(err,recordset)=>{
+        /*mssql.query("select id,Destino from localidades where Origen ='"+req.params.origen+"'",(err,recordset)=>{
             if (err) {
                 console.log('Error de Consulta getDestinos: '+err);
             }else{
                 res.json(recordset.recordset);
             }
-        });
+        });*/
+        res.json([{id:3,Origen:'Itsmo'},{id:4,Origen:'Cañada'}]);
     };
     
 

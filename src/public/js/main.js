@@ -27,18 +27,17 @@
         btn.disabled = true;
         btn.style.backgroundColor = "orange";
     };
-    
-    //recibir eventos
+
     socket.on('responseServer',(data) => {
         disableBtn(data.btn);
     });
-    
+
     socket.on('dbAsientos',(data) => {
         JSON.parse(data).forEach(element => {
             disableBtn(element.btn);
         });
     });
-
+    
     (()=>{
         let dbAsientos = localStorage.getItem('dbAsientos');
         if(dbAsientos !== null){

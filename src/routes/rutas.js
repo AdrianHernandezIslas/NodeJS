@@ -5,6 +5,4 @@
  router.get('/origenes',controllerRutas.getOrigenes);
  router.get('/destinos/:origen',controllerRutas.getDestinos);
 
-
-
  module.exports = router;
